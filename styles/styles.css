@@ -1,0 +1,59 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 50px;
+}
+
+nav li {
+    flex-grow: 1;
+    height: 100%;
+}
+
+nav li a {
+    display: block;
+    background-color: antiquewhite;
+    margin: 0 10px;
+    height: 100%;
+}
+
+nav li a:hover {
+    background-color: brown;
+    color: antiquewhite;
+}
+
+/* focus affects objects that are "selected", or currently active
+you can select an object with the mouse or by hitting tab */
+nav li a:focus {
+    border: 2px solid black;
+}
+
+/* the active state affects things that are currently clicked on*/
+nav li a:active {
+    background-color: darkblue;
+}
+
+/* hide the skiplinks using the position property*/
+.skiplinks ul {
+    list-style: none;
+    position: relative;
+}
+.skiplinks a{
+    position: absolute;
+    top: -10em;
+}
+
+/* reveal them when the user focuses on them - if they are tabbing through the site */
+.skiplinks a:focus {
+    top: 0;
+    background-color: darkorange;
+    padding: 10px;
+}
+
+input:focus {
+    border: 2px solid black;
+}

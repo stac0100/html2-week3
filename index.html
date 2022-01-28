@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Playing with Accessibilty</title>
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="skiplinks">
+            <ul>
+                <li><a href="">Skip to navigation</a></li>
+                <li><a href="">Skip to main content</a></li>
+                <li><a href="">Skip to footer</a></li>
+            </ul>
+        </div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Stuff</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+    
+            <form action="processform.php" method="get">
+                <!-- the for attribute of the label must match the id of the form field-->
+                <label for="fullname">Full name:</label>
+                <!-- the id is for the label - it's how the label links to the form field
+                    the name is for the server - it's how it identifies the content of the field-->
+                <input type="text" id="fullname" name="fullname">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </form>
+            <article>
+                <img src="images/kitty.jpg" alt="Tyche as a kitten asleep on a blanket" aria-describedby="tycheInfo">
+                <section id="tycheInfor>">
+                    <!-- itemprops -->
+                    <p itemprop="name">Tyche</p>
+                    <p itemprop="birthDate">October 15, 2020</p>
+                    <p>Tyche crawled out of our hedge in early November 2020</p>
+                </section>
+            </article>
+        </main>
+        <aside>
+            <!-- aria-label provides additional information or context -->
+            <a href="" aria-label="Subscribe to the newsletter">Subsrcibe</a>
+        </aside>
+    </body>
+</html>
